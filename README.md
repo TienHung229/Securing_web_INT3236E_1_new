@@ -44,20 +44,23 @@ dụng cho phép người dùng đăng nhập và phân quyền truy cập dựa
 
 ### 1. Trang chủ
 
-![Trang chủ](images/home.png)
+<img width="1001" height="556" alt="image" src="https://github.com/user-attachments/assets/8f531154-89ac-498f-8d6d-943c36743fee" />
+
 
 ### 2. Trang đăng nhập
 
-![Trang đăng nhập](images/login.png)
+<img width="770" height="510" alt="image" src="https://github.com/user-attachments/assets/327595c0-fab0-40ed-b0bb-debeb6ae96ca" />
+
 
 
 ### 3. Trang người dùng
 
-![Trang người dùng](images/user.png)
+<img width="1904" height="520" alt="image" src="https://github.com/user-attachments/assets/9ff90b4c-da94-483f-9d49-b48a66e1aaf8" />
 
 ### 4. Trang quản trị (chỉ dành cho ADMIN)
 
-![Trang quản trị](images/admin.png)
+<img width="1854" height="458" alt="image" src="https://github.com/user-attachments/assets/6f452208-75bf-43cc-b573-5565b103b46e" />
+
 
 ## V. TÀI KHOẢN DEMO
 
