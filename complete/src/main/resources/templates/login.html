@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Đăng nhập hệ thống</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #1c1e21;
+            margin-bottom: 24px;
+            font-size: 24px;
+        }
+
+        .message {
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .message.logout {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input::placeholder {
+            color: #90949c;
+        }
+
+        .btn {
+            background-color: #1877f2;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #166fe5;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <h1>Đăng nhập hệ thống</h1>
+
+    <!-- Hiển thị thông báo lỗi nếu đăng nhập sai -->
+    <div th:if="${param.error}" class="message error">
+        Tên đăng nhập hoặc mật khẩu không đúng.
+    </div>
+
+    <!-- Hiển thị thông báo khi đăng xuất thành công -->
+    <div th:if="${param.logout}" class="message logout">
+        Bạn đã đăng xuất thành công.
+    </div>
+
+    <form th:action="@{/login}" method="post">
+        <div class="form-group">
+            <input type="text" name="username" placeholder="Tên đăng nhập" required autofocus/>
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" placeholder="Mật khẩu" required/>
+        </div>
+        <div>
+            <input type="submit" value="Đăng nhập" class="btn"/>
+        </div>
+    </form>
+</div>
+</body>
+</html>
+
